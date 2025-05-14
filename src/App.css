@@ -1,0 +1,76 @@
+:root {
+  --background-color: #002642;
+  --card-color: rgb(245, 203, 187);
+  --smaller-background-color: #9f84bd;
+  --smaller-background-color2: rgba(191, 173, 211, 0.35);
+  --header: #facfad;
+  --font-color: #606d5d;
+}
+
+/* Base styles */
+body,
+.App {
+  background-image: repeating-linear-gradient(
+      188deg,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 19px,
+      transparent 19px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      84deg,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 19px,
+      transparent 19px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      244deg,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 19px,
+      transparent 19px,
+      transparent 21px
+    ),
+    linear-gradient(90deg, rgb(229, 37, 28), rgb(213, 10, 32));
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.heading {
+  color: var(--header);
+  font-size: 50px;
+}
+
+/* Layout containers */
+.main-container {
+  background-color: var(--smaller-background-color);
+  padding: 1.5rem;
+  min-height: 100vh;
+  border: 12px dotted rgba(238, 219, 219, 0.76);
+  box-shadow: -20px -24px 20px rgba(238, 219, 219, 0.76),
+    20px 14px 20px rgba(238, 219, 219, 0.76);
+}
+
+.main-card {
+  background-color: var(--card-color) !important;
+}
+
+/* Bottom music player styles */
+.current-song-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--smaller-background-color2);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999; /* make sure it's above other elements */
+  padding: 1rem 0;
+}
+.song-button {
+  background-color: black;
+  width: 80px;
+}
+.next-button {
+  margin-left: -100px;
+}
